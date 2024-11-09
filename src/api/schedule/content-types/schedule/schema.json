@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "schedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "routes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::route.route",
+      "mappedBy": "schedule"
+    },
+    "sourcePort": {
+      "type": "enumeration",
+      "enum": [
+        "balitmore"
+      ]
+    },
+    "destinationPort": {
+      "type": "enumeration",
+      "enum": [
+        "lagos"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "transitDays": {
+      "type": "integer"
+    }
+  }
+}
