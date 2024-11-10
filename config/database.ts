@@ -31,7 +31,7 @@ export default ({ env }) => {
         user: env('DATABASE_USERNAME', 'strapi'),
         password: env('DATABASE_PASSWORD', 'strapi'),
         ssl: {
-        ca:env('DTABASE_CA')}
+        ca:env('DATABASE_CA')}
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
