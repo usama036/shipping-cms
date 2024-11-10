@@ -635,19 +635,25 @@ export interface ApiEstimateEstimate extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    shipType: Schema.Attribute.String;
-    origin: Schema.Attribute.String;
-    destination: Schema.Attribute.String;
-    quantity: Schema.Attribute.String;
-    containerType: Schema.Attribute.String;
-    weight: Schema.Attribute.String;
-    name: Schema.Attribute.String;
     companyName: Schema.Attribute.String;
-    country: Schema.Attribute.String;
-    state: Schema.Attribute.String;
-    phoneNo: Schema.Attribute.String;
-    mobileNo: Schema.Attribute.String;
-    email: Schema.Attribute.String;
+    contactCountry: Schema.Attribute.String;
+    containerType: Schema.Attribute.String;
+    destinationCountry: Schema.Attribute.String;
+    destinationType: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    firstName: Schema.Attribute.String;
+    height: Schema.Attribute.String;
+    lastName: Schema.Attribute.String;
+    length: Schema.Attribute.String;
+    makeModel: Schema.Attribute.String;
+    mobility: Schema.Attribute.String;
+    originCountry: Schema.Attribute.String;
+    originType: Schema.Attribute.String;
+    phoneNumber: Schema.Attribute.String;
+    quantity: Schema.Attribute.String;
+    shipmentType: Schema.Attribute.String;
+    vgm: Schema.Attribute.String;
+    width: Schema.Attribute.String;
     estimateStatus: Schema.Attribute.Enumeration<
       ['pending', 'approved', 'rejected', 'resolved']
     >;

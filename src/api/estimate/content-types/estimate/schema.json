@@ -12,46 +12,63 @@
   },
   "pluginOptions": {},
   "attributes": {
-  "shipType": {
-      "type": "string"
-    },
-    "origin": {
-      "type": "string"
-    },
-    "destination": {
-      "type": "string"
-    },
-    "quantity": {
-      "type": "string"
-    },
-    "containerType": {
-      "type": "string"
-    },
-    "weight": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
-    "companyName": {
-      "type": "string"
-    },
-    "country": {
-      "type": "string"
-    },
-    "state": {
-      "type": "string"
-    },
-    "phoneNo": {
-      "type": "string"
-    },
-    "mobileNo": {
-      "type": "string"
-    },
-    "email": {
-      "type": "string"
-    },
-
+  "companyName": {
+    "type": "string"
+  },
+  "contactCountry": {
+    "type": "string"
+  },
+  "containerType": {
+    "type": "string"
+  },
+  "destinationCountry": {
+    "type": "string"
+  },
+  "destinationType": {
+    "type": "string"
+  },
+  "email": {
+    "type": "email"
+  },
+  "firstName": {
+    "type": "string"
+  },
+  "height": {
+    "type": "string"
+  },
+  "lastName": {
+    "type": "string"
+  },
+  "length": {
+    "type": "string"
+  },
+  "makeModel": {
+    "type": "string"
+  },
+  "mobility": {
+    "type": "string"
+  },
+  "originCountry": {
+    "type": "string"
+  },
+  "originType": {
+    "type": "string"
+  },
+  "phoneNumber": {
+    "type": "string"
+  },
+  "quantity": {
+    "type": "string"
+  },
+  "shipmentType": {
+    "type": "string"
+  },
+  "vgm": {
+    "type": "string"
+  },
+  "width": {
+    "type": "string"
+  },
     "estimateStatus": {
       "type": "enumeration",
       "enum": [
