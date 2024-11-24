@@ -12,16 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "depositMethod": {
       "type": "string"
     },
     "amount": {
-      "type": "string"
-    },
-    "existingBalance": {
       "type": "string"
     },
     "slip": {
@@ -41,10 +35,17 @@
         "approved",
         "pending",
         "rejected"
-      ]
+      ],
+      "default": "pending"
     },
     "rejectionReason": {
       "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "balances"
     }
   }
 }

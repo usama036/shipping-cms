@@ -12,63 +12,63 @@
   },
   "pluginOptions": {},
   "attributes": {
-  "companyName": {
-    "type": "string"
-  },
-  "contactCountry": {
-    "type": "string"
-  },
-  "containerType": {
-    "type": "string"
-  },
-  "destinationCountry": {
-    "type": "string"
-  },
-  "destinationType": {
-    "type": "string"
-  },
-  "email": {
-    "type": "email"
-  },
-  "firstName": {
-    "type": "string"
-  },
-  "height": {
-    "type": "string"
-  },
-  "lastName": {
-    "type": "string"
-  },
-  "length": {
-    "type": "string"
-  },
-  "makeModel": {
-    "type": "string"
-  },
-  "mobility": {
-    "type": "string"
-  },
-  "originCountry": {
-    "type": "string"
-  },
-  "originType": {
-    "type": "string"
-  },
-  "phoneNumber": {
-    "type": "string"
-  },
-  "quantity": {
-    "type": "string"
-  },
-  "shipmentType": {
-    "type": "string"
-  },
-  "vgm": {
-    "type": "string"
-  },
-  "width": {
-    "type": "string"
-  },
+    "companyName": {
+      "type": "string"
+    },
+    "contactCountry": {
+      "type": "string"
+    },
+    "containerType": {
+      "type": "string"
+    },
+    "destinationCountry": {
+      "type": "string"
+    },
+    "destinationType": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "length": {
+      "type": "string"
+    },
+    "makeModel": {
+      "type": "string"
+    },
+    "mobility": {
+      "type": "string"
+    },
+    "originCountry": {
+      "type": "string"
+    },
+    "originType": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "shipmentType": {
+      "type": "string"
+    },
+    "vgm": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
     "estimateStatus": {
       "type": "enumeration",
       "enum": [
@@ -76,7 +76,8 @@
         "approved",
         "rejected",
         "resolved"
-      ]
+      ],
+      "default": "pending"
     },
     "customer": {
       "type": "relation",

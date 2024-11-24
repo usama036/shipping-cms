@@ -478,7 +478,6 @@ export interface PluginUsersPermissionsUser
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    balance: Schema.Attribute.Integer;
     countryCode: Schema.Attribute.String;
     phoneNumber: Schema.Attribute.String;
     referralSource: Schema.Attribute.String;
@@ -486,6 +485,7 @@ export interface PluginUsersPermissionsUser
     country: Schema.Attribute.String;
     accountType: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    balances: Schema.Attribute.Relation<'oneToMany', 'api::balance.balance'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -514,18 +514,21 @@ export interface ApiBalanceBalance extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    name: Schema.Attribute.String;
     depositMethod: Schema.Attribute.String;
     amount: Schema.Attribute.String;
-    existingBalance: Schema.Attribute.String;
     slip: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
     paymentStatus: Schema.Attribute.Enumeration<
       ['approved', 'pending', 'rejected']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'pending'>;
     rejectionReason: Schema.Attribute.String;
+    user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -656,7 +659,8 @@ export interface ApiEstimateEstimate extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String;
     estimateStatus: Schema.Attribute.Enumeration<
       ['pending', 'approved', 'rejected', 'resolved']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'pending'>;
     customer: Schema.Attribute.Relation<
       'oneToOne',
       'plugin::users-permissions.user'
